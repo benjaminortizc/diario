@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Motor Digital Chile - Inacap Edition</title>
+    <title>Motor Digital Chile - Actualidad Automotriz</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <style>
@@ -11,6 +11,7 @@
             background-color: #f4f7f6;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
+        /* Estilo Título Periódico */
         .header-title {
             font-size: 3.5rem;
             font-weight: 900;
@@ -19,6 +20,7 @@
             border-bottom: 4px solid #e11d2a; /* Rojo Inacap */
             padding: 25px 0;
             text-transform: uppercase;
+            letter-spacing: -1px;
         }
         .header-subtitle {
             text-align: center;
@@ -26,12 +28,15 @@
             font-size: 1.1rem;
             margin-top: 12px;
             font-weight: 500;
+            font-style: italic;
         }
+        /* Cards y Efectos */
         .article-card {
             transition: all 0.3s ease;
             border: none;
             border-radius: 12px;
             overflow: hidden;
+            background: white;
         }
         .article-card:hover {
             transform: translateY(-10px);
@@ -41,55 +46,50 @@
             font-size: 0.75rem;
             background-color: #e11d2a;
             color: white;
-            padding: 5px 10px;
+            padding: 5px 12px;
             border-radius: 50px;
             font-weight: bold;
         }
-        .navbar-inacap {
+        .navbar-custom {
             border-bottom: 3px solid #e11d2a;
         }
         footer {
             background-color: #1a1a1a;
-            color: #ccc;
+            color: #888;
+        }
+        .img-featured {
+            height: 400px;
+            object-fit: cover;
         }
     </style>
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top navbar-inacap shadow">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top navbar-custom shadow">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#">🚗 MOTOR DIGITAL <span class="text-danger">CHILE</span></a>
+            <a class="navbar-brand fw-bold" href="index.html">🚗 MOTOR DIGITAL <span class="text-danger">CHILE</span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto">
-                    <li class="nav-item"><a class="nav-link active" href="#">Lanzamientos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Test Drive</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Lanzamientos</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Electromovilidad</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Guía de Compra</a></li>
                 </ul>
-                <div class="d-flex align-items-center gap-3">
-                    <span class="text-secondary d-none d-lg-inline small">alumno@inacap.cl</span>
-                    <div class="btn-group">
-                        <button class="btn btn-outline-light btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown">
-                            Mi Cuenta
-                        </button>
-                        <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="#">Perfil</a></li>
-                            <li><a class="dropdown-item" href="#">Mis Favoritos</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item text-danger" href="#">Cerrar Sesión</a></li>
-                        </ul>
-                    </div>
+                
+                <div class="d-flex gap-2">
+                    <a href="#" class="btn btn-outline-light btn-sm px-3">Entrar</a>
+                    <a href="registro.html" class="btn btn-danger btn-sm px-3 shadow-sm fw-bold">Registrarse</a>
                 </div>
             </div>
         </div>
     </nav>
 
     <header class="bg-white py-4 shadow-sm">
-        <div class="container">
-            <div class="header-title">Motor Digital</div>
-            <div class="header-subtitle">Actualidad Automotriz en Chile • Proyecto Programación Web 2026</div>
+        <div class="container text-center">
+            <h1 class="header-title d-inline-block">Motor Digital</h1>
+            <div class="header-subtitle">Líderes en noticias del sector automotor • Santiago, 08 de Abril de 2026</div>
         </div>
     </header>
 
@@ -97,35 +97,36 @@
         <div class="row g-4">
             
             <div class="col-lg-8">
-                <div class="card article-card shadow-sm mb-4">
-                    <img src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Auto Eléctrico">
+                <div class="card article-card shadow-sm mb-5">
+                    <img src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=1000&q=80" class="card-img-top img-featured" alt="Auto Eléctrico Chile">
                     <div class="card-body p-4">
-                        <span class="date-badge mb-3 d-inline-block">TENDENCIA</span>
-                        <h2 class="fw-bold">El avance de la Electromovilidad en Santiago</h2>
-                        <p class="card-text text-muted">Chile se posiciona como líder regional en la adopción de buses y vehículos particulares eléctricos. Analizamos los nuevos puntos de carga disponibles desde Arica a Punta Arenas.</p>
-                        <div class="d-flex justify-content-between align-items-center mt-4">
-                            <a href="#" class="btn btn-dark px-4">Leer Reportaje</a>
-                            <small class="text-muted">Autor: <span class="fw-bold">sede_stgo@inacap.cl</span></small>
+                        <span class="date-badge mb-3 d-inline-block">REPORTAJE ESPECIAL</span>
+                        <h2 class="fw-bold">Chile lidera la carga: El boom de la Electromovilidad</h2>
+                        <p class="card-text text-muted">Con la inauguración de la nueva electrolinera más grande de Sudamérica en Santiago, el país da un paso gigante hacia la meta de 2035. Analizamos qué modelos llegarán este año al mercado nacional.</p>
+                        <hr>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <a href="#" class="btn btn-dark">Leer más</a>
+                            <small class="text-muted">Por: <strong>Redacción Motor Digital</strong></small>
                         </div>
                     </div>
                 </div>
 
-                <div class="row row-cols-1 row-cols-md-2 g-4">
-                    <div class="col">
+                <div class="row g-4">
+                    <div class="col-md-6">
                         <div class="card h-100 article-card shadow-sm">
                             <div class="card-body">
-                                <h5 class="fw-bold">Ley Grabado de Patentes</h5>
-                                <p class="small text-muted">Todo lo que necesitas saber sobre la nueva normativa obligatoria en Chile para este 2026.</p>
-                                <a href="#" class="text-danger text-decoration-none fw-bold">Ver requisitos →</a>
+                                <h5 class="fw-bold">Nuevas Patentes 2026</h5>
+                                <p class="small text-muted">Todo sobre el proceso obligatorio de grabado de vidrios y espejos en Chile.</p>
+                                <a href="#" class="btn btn-sm btn-outline-danger">Ver detalles</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="col-md-6">
                         <div class="card h-100 article-card shadow-sm">
                             <div class="card-body">
-                                <h5 class="fw-bold">Top 5 SUVs más vendidos</h5>
-                                <p class="small text-muted">El ranking actualizado de los modelos preferidos por las familias chilenas este semestre.</p>
-                                <a href="#" class="text-danger text-decoration-none fw-bold">Ver ranking →</a>
+                                <h5 class="fw-bold">Permiso de Circulación</h5>
+                                <p class="small text-muted">Revisa las fechas clave y los montos según el modelo de tu vehículo.</p>
+                                <a href="#" class="btn btn-sm btn-outline-danger">Consultar tabla</a>
                             </div>
                         </div>
                     </div>
@@ -133,52 +134,61 @@
             </div>
 
             <div class="col-lg-4">
-                <div class="card border-0 shadow-sm mb-4 bg-white">
-                    <div class="card-header bg-danger text-white fw-bold">Acceso Estudiantes</div>
-                    <div class="card-body">
-                        <p class="small text-muted">Inicia sesión con tu correo institucional para acceder a beneficios en talleres asociados.</p>
-                        <form>
-                            <div class="mb-3">
-                                <input type="email" class="form-control form-control-sm" placeholder="ejemplo@inacap.cl">
-                            </div>
-                            <button type="submit" class="btn btn-danger btn-sm w-100 shadow-sm">Ingresar al Portal</button>
-                        </form>
+                
+                <div class="card border-0 shadow-sm mb-4">
+                    <div class="card-header bg-danger text-white fw-bold text-center py-3">
+                        ¿Eres alumno INACAP?
+                    </div>
+                    <div class="card-body text-center p-4">
+                        <p class="small text-muted mb-4">Regístrate con tu correo <strong>@inacap.cl</strong> para obtener acceso a pruebas de manejo exclusivas y convenios en talleres.</p>
+                        <a href="registro.html" class="btn btn-outline-danger w-100 mb-2">Crear mi cuenta</a>
+                        <a href="#" class="btn btn-link btn-sm text-secondary">Ya tengo cuenta, iniciar sesión</a>
                     </div>
                 </div>
 
-                <div class="card border-0 shadow-sm mb-4">
+                <div class="card border-0 shadow-sm mb-4 bg-dark text-white">
                     <div class="card-body">
-                        <h5 class="fw-bold mb-3">Más Leídos 🔥</h5>
-                        <div class="list-group list-group-flush">
-                            <a href="#" class="list-group-item list-group-item-action border-0 px-0 small">• Restricción Vehicular 2026</a>
-                            <a href="#" class="list-group-item list-group-item-action border-0 px-0 small">• Precios de bencina en Chile</a>
-                            <a href="#" class="list-group-item list-group-item-action border-0 px-0 small">• Mejores autos usados por < $10M</a>
+                        <h5 class="fw-bold mb-3">Lo más buscado 🔥</h5>
+                        <ul class="list-group list-group-flush bg-transparent">
+                            <li class="list-group-item bg-transparent text-white border-secondary small">1. Mejores Citycars en Chile</li>
+                            <li class="list-group-item bg-transparent text-white border-secondary small">2. Precio Bencina 95 octanos</li>
+                            <li class="list-group-item bg-transparent text-white border-secondary small">3. Pick-ups chinas vs tradicionales</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card border-0 shadow-sm p-3 bg-light">
+                    <div class="card-body">
+                        <h6 class="fw-bold text-center mb-3">Suscríbete al Boletín</h6>
+                        <div class="input-group">
+                            <input type="email" class="form-control form-control-sm" placeholder="Tu email...">
+                            <button class="btn btn-danger btn-sm" type="button">OK</button>
                         </div>
                     </div>
                 </div>
-
-                <div class="card bg-dark text-white p-4 text-center border-0 rounded-4">
-                    <h6>Convenio Motor Digital</h6>
-                    <p class="small text-secondary">Presenta tu credencial de alumno y obtén un 20% de descuento en revisiones técnicas.</p>
-                    <hr class="border-secondary">
-                    <small class="text-danger fw-bold">#InacapWebProject</small>
-                </div>
             </div>
+
         </div>
     </main>
 
     <footer class="py-5">
         <div class="container">
-            <div class="row">
+            <div class="row align-items-center">
                 <div class="col-md-6 text-center text-md-start">
-                    <p class="mb-0 fw-bold">Motor Digital Chile</p>
-                    <small>Santiago, Chile - 2026</small>
+                    <p class="mb-0 fw-bold text-white">MOTOR DIGITAL CHILE</p>
+                    <small>Proyecto Académico Programación Web • 2026</small>
                 </div>
-                <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
-                    <p class="small mb-0">Contacto: <strong>webmaster@inacap.cl</strong></p>
-                    <small class="text-secondary">Desarrollado para examen final de Programación Web.</small>
+                <div class="col-md-6 text-center text-md-end mt-4 mt-md-0">
+                    <p class="small mb-1 text-white">Contacto: <strong>info@inacap.cl</strong></p>
+                    <div class="d-flex justify-content-center justify-content-md-end gap-3 mt-2">
+                        <small>Facebook</small>
+                        <small>Instagram</small>
+                        <small>X</small>
+                    </div>
                 </div>
             </div>
+            <hr class="border-secondary mt-4">
+            <p class="text-center mb-0 small" style="font-size: 0.7rem;">Este sitio es un proyecto con fines educativos para la asignatura de desarrollo web.</p>
         </div>
     </footer>
 
